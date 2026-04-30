@@ -1,0 +1,734 @@
+# 🏦 DEWS — Loan & Fund Management System
+### CEO Executive Dashboard
+
+> A modern, real-time executive dashboard for comprehensive loan fund management with advanced analytics, financial tracking, and member oversight.
+
+[![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=flat-square&logo=php)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-4.4-FF6384?style=flat-square&logo=chart.js&logoColor=white)](https://www.chartjs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Screenshots](#-screenshots)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Security](#-security)
+- [Database Schema](#-database-schema)
+- [API Reference](#-api-reference)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Support](#-support)
+
+---
+
+## 🎯 Overview
+
+**DEWS (Digital Executive Welfare System)** is a comprehensive loan and fund management platform designed for organizations, cooperatives, and financial institutions. The CEO Dashboard provides real-time insights into financial operations, member activities, loan performance, and inventory management.
+
+### Key Highlights
+
+- 📊 **Real-time Analytics** — Live KPI tracking with auto-refresh
+- 💰 **Financial Intelligence** — Comprehensive income/expense tracking
+- 👥 **Member Management** — Active/inactive member oversight
+- 🏦 **Loan Tracking** — Outstanding balances, repayment schedules
+- 📈 **Interactive Charts** — Visual trends with drill-down capability
+- 📦 **Inventory Control** — Stock levels with low-stock alerts
+- 📱 **Fully Responsive** — Desktop, tablet, and mobile optimized
+- 🔒 **Secure Access** — Role-based authentication (AppGini compatible)
+
+---
+
+## ✨ Features
+
+### 1️⃣ **Fund Overview Dashboard**
+
+<table>
+<tr>
+<td width="50%">
+
+**Real-time KPIs**
+- Total Loan Fund Balance
+- Active Loans (count + amount)
+- Outstanding Due Amount
+- Total Repayments Collected
+- Active/Inactive Member Count
+- Year-over-Year Member Fees
+
+</td>
+<td width="50%">
+
+**Visual Indicators**
+- Color-coded metrics (Green/Red/Blue/Orange)
+- Trend badges (↑/↓ percentage changes)
+- Progress bars for goals
+- Status pills for quick insights
+
+</td>
+</tr>
+</table>
+
+### 2️⃣ **Financial Analytics**
+
+- **Member Fees Tracking**
+  - Current vs. Previous Year comparison
+  - Monthly breakdown (Jan–Dec)
+  - Unpaid fees identification
+  
+- **Income Management**
+  - Other income by type (grouped)
+  - Bank deposits by institution
+  - Repayment collections (installment + interest + fees)
+
+- **Expense Monitoring**
+  - Bank withdrawals tracking
+  - Year-over-year trends
+  - Net change calculations
+
+### 3️⃣ **Loan Analytics**
+
+- **Member Loan Balances**
+  - Unbalanced loan applications
+  - Outstanding amounts per member
+  - Payment progress bars
+  - Overdue loan alerts
+
+- **Repayment Tracking**
+  - Recent payment history (last 20 transactions)
+  - Payment type breakdown (installment/interest/fees)
+  - Status monitoring (Active/Closed)
+
+### 4️⃣ **Interactive Charts**
+
+| Chart Type | Purpose |
+|------------|---------|
+| 📊 **Bar Chart** | Monthly Member Fees Collection |
+| 📈 **Line Chart** | Loan vs Repayment Trend |
+| 📊 **Grouped Bar** | Bank Deposits Comparison (Current vs Previous Year) |
+| 🥧 **Doughnut Chart** | Income Breakdown by Source |
+
+**Chart Features:**
+- Click-to-drill-down for detailed filtering
+- Export as PNG images
+- Responsive canvas sizing
+- Custom color schemes
+
+### 5️⃣ **Data Tables**
+
+- **Recent Payments** — Last 20 transactions with full details
+- **Unbalanced Loans** — Outstanding amounts with due dates
+- **Unpaid Fees** — Members missing fee payments
+- **Inventory Summary** — Stock levels with alerts
+
+**Table Features:**
+- Export to CSV
+- Sortable columns
+- Responsive design
+- Visual status indicators
+
+### 6️⃣ **Inventory Management**
+
+- Item-wise stock tracking (IN/OUT/Balance)
+- Low stock warnings (≤5 units)
+- Out-of-stock alerts
+- Visual stock level bars
+- Automatic balance calculations
+
+### 7️⃣ **Filters & Export**
+
+- **Dynamic Filters:**
+  - Year selection
+  - Month filtering
+  - Bank-specific views
+  - Member filtering
+
+- **Export Options:**
+  - CSV export (all tables)
+  - PNG export (charts)
+  - Print-optimized layout
+  - Batch export functionality
+
+---
+
+## 🛠 Tech Stack
+
+### Backend
+- **PHP 8.0+** — Server-side logic
+- **MySQL 8.0+** — Database management
+- **AppGini Framework** — Rapid application development
+
+### Frontend
+- **HTML5 / CSS3** — Modern markup & styling
+- **Bootstrap 5.3** — Responsive UI framework
+- **JavaScript (ES6+)** — Interactive functionality
+- **Chart.js 4.4** — Data visualization
+
+### Design
+- **Google Fonts** — Syne (headings) + DM Sans (body)
+- **Bootstrap Icons** — Icon library
+- **Custom CSS Variables** — Theming system
+- **Dark Theme** — Professional executive aesthetic
+
+### Features
+- **Responsive Grid** — Mobile-first design
+- **Intersection Observer** — Scroll animations
+- **LocalStorage API** — Client-side caching
+- **Fetch API** — AJAX operations
+
+---
+
+## 📸 Screenshots
+
+### Desktop View
+```
+┌─────────────────────────────────────────────────────────┐
+│  🏦 DEWS                    CEO Executive Dashboard     │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐    │
+│  │ Fund │  │Loans │  │ Due  │  │Repay │  │Member│    │
+│  │ 40k  │  │  15  │  │ 12k  │  │ 28k  │  │  45  │    │
+│  └──────┘  └──────┘  └──────┘  └──────┘  └──────┘    │
+│                                                         │
+│  ┌────────────────────┐  ┌────────────────────┐       │
+│  │  📊 Monthly Fees   │  │  📈 Loan Trends    │       │
+│  │                    │  │                    │       │
+│  │  [Bar Chart]       │  │  [Line Chart]      │       │
+│  └────────────────────┘  └────────────────────┘       │
+│                                                         │
+│  ┌──────────────────────────────────────────┐         │
+│  │  📋 Recent Payments                      │         │
+│  │  ┌────┬────────┬─────────┬────────┐     │         │
+│  │  │Date│ Member │  Loan   │ Amount │     │         │
+│  │  ├────┼────────┼─────────┼────────┤     │         │
+│  │  │... │  ...   │   ...   │  ...   │     │         │
+│  └──────────────────────────────────────────┘         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Mobile View
+```
+┌─────────────────┐
+│ ☰  DEWS         │
+├─────────────────┤
+│ ┌─────────────┐ │
+│ │  Fund: 40k  │ │
+│ └─────────────┘ │
+│ ┌─────────────┐ │
+│ │ Loans: 15   │ │
+│ └─────────────┘ │
+│                 │
+│ [Chart Area]    │
+│                 │
+│ [Table Area]    │
+└─────────────────┘
+```
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+
+- PHP 8.0 or higher
+- MySQL 8.0 or higher
+- AppGini 24.x (if using framework features)
+- Web server (Apache/Nginx)
+
+### Step 1: Clone Repository
+
+```bash
+git clone https://github.com/yourusername/dews-dashboard.git
+cd dews-dashboard
+```
+
+### Step 2: Database Setup
+
+1. **Import SQL Schema**
+```bash
+mysql -u root -p < dews_1_.sql
+```
+
+2. **Update Database Credentials**
+
+Edit `dashboard.php` (lines 18-21):
+
+```php
+$dbHost = 'localhost';
+$dbName = 'dews';
+$dbUser = 'your_username';
+$dbPass = 'your_password';
+```
+
+### Step 3: File Deployment
+
+**Option A: AppGini Integration**
+```bash
+# Copy to AppGini project root
+cp dashboard.php /path/to/appgini/project/
+
+# Or create custom pages folder
+mkdir /path/to/appgini/project/custom-pages
+cp dashboard.php /path/to/appgini/project/custom-pages/
+```
+
+**Option B: Standalone Installation**
+```bash
+# Copy to web server document root
+cp dashboard.php /var/www/html/
+```
+
+### Step 4: Set Permissions
+
+```bash
+chmod 644 dashboard.php
+chown www-data:www-data dashboard.php
+```
+
+### Step 5: Access Dashboard
+
+Open browser and navigate to:
+```
+https://yourdomain.com/dashboard.php
+```
+
+---
+
+## ⚙️ Configuration
+
+### Database Connection
+
+Edit the connection block in `dashboard.php`:
+
+```php
+/* ─── 1. DATABASE CONNECTION (AppGini-compatible) ─── */
+if (!isset($conn) || !$conn) {
+    $dbHost = 'localhost';        // Database host
+    $dbName = 'dews';             // Database name
+    $dbUser = 'root';             // Database username
+    $dbPass = '';                 // Database password
+    $conn   = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
+    $conn->set_charset('utf8mb4');
+}
+```
+
+### AppGini Integration
+
+If using AppGini's authentication system:
+
+```php
+// Add after line 1
+require_once(__DIR__ . '/lib.php');
+
+// Check if user is logged in
+if (!$_SESSION['memberID']) {
+    header('Location: index.php');
+    exit;
+}
+
+// Check user permissions (CEO/Admin only)
+$allowed_groups = [1, 2]; // Admin and CEO group IDs
+if (!in_array($_SESSION['groupID'], $allowed_groups)) {
+    die('Access Denied: CEO/Admin access only');
+}
+```
+
+### Auto-Refresh Interval
+
+Change refresh timer (default: 5 minutes):
+
+```javascript
+// Line 1127 in dashboard.php
+let refreshTimer = 300; // seconds (change to desired value)
+```
+
+### Theme Customization
+
+Edit CSS variables (lines 198-218):
+
+```css
+:root {
+  --bg:          #0d1117;    /* Background color */
+  --surface:     #161b22;    /* Card background */
+  --green:       #3fb950;    /* Positive values */
+  --red:         #f85149;    /* Negative values */
+  --blue:        #58a6ff;    /* Neutral values */
+  --orange:      #f0883e;    /* Warnings */
+  /* ... more colors */
+}
+```
+
+---
+
+## 📖 Usage
+
+### Navigation
+
+The sidebar provides quick access to:
+- **Overview** — Main KPI dashboard
+- **Financials** — Income/expense summaries
+- **Loans** — Loan balances and analytics
+- **Payments** — Recent transaction history
+- **Fees** — Member fee tracking
+- **Bank** — Bank deposits and withdrawals
+- **Inventory** — Stock management
+- **Charts** — Visual trend analysis
+
+### Filtering Data
+
+Use the filter bar to narrow results:
+
+1. **Year Filter** — Select fiscal year
+2. **Month Filter** — View specific month
+3. **Bank Filter** — Filter by banking institution
+4. Click **Apply** to refresh data
+
+### Exporting Data
+
+**CSV Export:**
+- Click CSV button on any table
+- File downloads automatically
+- Filename includes date stamp
+
+**Chart Export:**
+- Click PNG button on charts
+- Image downloads as PNG
+- Suitable for reports/presentations
+
+**Print View:**
+- Click printer icon in topbar
+- Print-optimized layout
+- Removes filters/buttons
+
+### Interactive Charts
+
+**Drill-Down:**
+- Click any bar/point on chart
+- Alert shows detailed data
+- Auto-redirect to filtered view
+
+### Mobile Usage
+
+**Sidebar Toggle:**
+- Tap hamburger menu (☰) to open/close
+- Tap outside sidebar to close
+- Smooth animations
+
+---
+
+## 🔒 Security
+
+### Search Engine Protection
+
+**Prevent Indexing:**
+```html
+<!-- Already included in dashboard.php -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+```
+
+**HTTP Header:**
+```php
+header('X-Robots-Tag: noindex, nofollow', true);
+```
+
+### Access Control
+
+**Basic Authentication (.htaccess):**
+```apache
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
+```
+
+**IP Whitelist:**
+```apache
+Order Deny,Allow
+Deny from all
+Allow from 192.168.1.100
+Allow from YOUR_IP_ADDRESS
+```
+
+### Best Practices
+
+✅ **Use HTTPS** — Encrypt all traffic  
+✅ **Session Management** — Implement timeouts  
+✅ **SQL Injection Prevention** — Use prepared statements  
+✅ **XSS Protection** — HTML escaping (`esc()` function)  
+✅ **CSRF Tokens** — Validate form submissions  
+✅ **Regular Backups** — Automated daily backups  
+✅ **Access Logs** — Monitor dashboard access  
+✅ **Strong Passwords** — Enforce password policies  
+
+### robots.txt
+
+Create in website root:
+```txt
+User-agent: *
+Disallow: /dashboard.php
+Disallow: /custom-pages/
+Disallow: /*_view.php
+```
+
+---
+
+## 🗄 Database Schema
+
+### Core Tables
+
+| Table | Purpose |
+|-------|---------|
+| `loan_application` | Loan requests and approvals |
+| `loan_repayment` | Payment transactions |
+| `loan_fund` | Fund contributions |
+| `members` | Member profiles |
+| `member_fees` | Membership fee payments |
+| `bank_data` | Bank deposits/withdrawals |
+| `other_incame` | Other income sources |
+| `expenses` | Expense tracking |
+| `inventory` | Stock movements |
+| `items` | Inventory items |
+
+### Key Relationships
+
+```
+members
+  ├─→ loan_application (Member_ID → Index)
+  ├─→ loan_repayment (Member_ID → Index)
+  ├─→ member_fees (Member_ID → Index)
+  └─→ benefits (Member_ID → Index)
+
+loan_application
+  ├─→ loan_repayment (ID → Loan_application)
+  └─→ approval (ID → Laon_application)
+
+bank_names
+  └─→ bank_data (ID → Bank)
+
+income_types
+  └─→ other_incame (Id → Income_type)
+
+items
+  └─→ inventory (ID → Items)
+```
+
+---
+
+## 📡 API Reference
+
+### Helper Functions
+
+```php
+// Execute query and return all rows
+q($conn, $sql) → array
+
+// Execute query and return first row
+q1($conn, $sql) → array
+
+// Format currency (Rs. 1,234.56)
+money($value) → string
+
+// HTML escape for XSS protection
+esc($value) → string
+
+// Trend badge (↑ 15.2% or ↓ 8.3%)
+trendBadge($current, $previous) → string
+```
+
+### JavaScript Functions
+
+```javascript
+// Toggle sidebar (mobile)
+toggleSidebar()
+closeSidebar()
+
+// Export table to CSV
+exportTableCSV(tableId, filename)
+
+// Export chart as PNG
+exportChart(canvasId, filename)
+
+// Export all tables
+exportAllCSV()
+
+// Drill-down handler
+drillDown(type, elements, chart)
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how to get started:
+
+### Reporting Bugs
+
+1. Check existing [Issues](https://github.com/yourusername/dews-dashboard/issues)
+2. Create new issue with:
+   - Clear title and description
+   - Steps to reproduce
+   - Expected vs actual behavior
+   - Screenshots (if applicable)
+   - Environment details (PHP/MySQL versions)
+
+### Feature Requests
+
+1. Open an [Issue](https://github.com/yourusername/dews-dashboard/issues/new)
+2. Use label `enhancement`
+3. Describe use case and benefits
+
+### Pull Requests
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+### Development Setup
+
+```bash
+# Clone your fork
+git clone https://github.com/yourusername/dews-dashboard.git
+
+# Create development branch
+git checkout -b dev
+
+# Make changes and test locally
+
+# Run tests (if available)
+# php vendor/bin/phpunit
+
+# Submit PR to main repository
+```
+
+### Code Style
+
+- **PHP:** Follow PSR-12 coding standards
+- **JavaScript:** ES6+ with semicolons
+- **CSS:** BEM naming convention
+- **Comments:** Clear, concise documentation
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+```
+MIT License
+
+Copyright (c) 2026 DEWS Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+See [LICENSE](LICENSE) file for full details.
+
+---
+
+## 💬 Support
+
+### Documentation
+
+- **Installation Guide:** See [Installation](#-installation) section
+- **Configuration:** See [Configuration](#-configuration) section
+- **Security:** See [Security](#-security) section
+
+### Community
+
+- **GitHub Issues:** [Report bugs or request features](https://github.com/yourusername/dews-dashboard/issues)
+- **Discussions:** [Ask questions and share ideas](https://github.com/yourusername/dews-dashboard/discussions)
+- **Email:** support@dewssystem.com
+
+### Professional Support
+
+For enterprise support, customization, or consulting:
+- **Email:** enterprise@dewssystem.com
+- **Website:** https://dewssystem.com/support
+
+---
+
+## 🙏 Acknowledgments
+
+Built with:
+- [AppGini](https://bigprof.com/appgini/) — Rapid PHP application framework
+- [Bootstrap](https://getbootstrap.com/) — CSS framework
+- [Chart.js](https://www.chartjs.org/) — JavaScript charting
+- [Bootstrap Icons](https://icons.getbootstrap.com/) — Icon library
+- [Google Fonts](https://fonts.google.com/) — Typography
+
+Special thanks to:
+- The AppGini community for framework support
+- Beta testers and early adopters
+- Contributors and issue reporters
+
+---
+
+## 🗺 Roadmap
+
+### Version 2.0 (Planned)
+
+- [ ] Multi-language support (Sinhala, Tamil, English)
+- [ ] PDF report generation
+- [ ] Email notifications (overdue loans, low stock)
+- [ ] Advanced filtering (date ranges, custom queries)
+- [ ] User activity logs
+- [ ] Mobile app (iOS/Android)
+- [ ] REST API for integrations
+- [ ] Real-time WebSocket updates
+- [ ] Role-based dashboards (Manager, Accountant, Member)
+- [ ] Automated backup system
+
+### Version 1.1 (In Progress)
+
+- [ ] Bulk import/export (Excel)
+- [ ] Custom report builder
+- [ ] SMS integration for reminders
+- [ ] Enhanced mobile UX
+- [ ] Dark/Light theme toggle
+
+---
+
+## 📊 Project Stats
+
+![GitHub stars](https://img.shields.io/github/stars/yourusername/dews-dashboard?style=social)
+![GitHub forks](https://img.shields.io/github/forks/yourusername/dews-dashboard?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/yourusername/dews-dashboard?style=social)
+
+![GitHub issues](https://img.shields.io/github/issues/yourusername/dews-dashboard)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/dews-dashboard)
+![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/dews-dashboard)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for financial institutions and cooperatives worldwide**
+
+[⬆ Back to Top](#-dews--loan--fund-management-system)
+
+</div>
